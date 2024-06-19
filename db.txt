@@ -21,6 +21,6 @@ CREATE TABLE subject (
 		FOREIGN KEY (id)
 		REFERENCES info(id)
 		ON DELETE CASCADE
-);
+) ENGINE=InnoDB;
 
 
