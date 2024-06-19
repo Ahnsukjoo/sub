@@ -8,15 +8,17 @@ create table info (
 	dept varchar(20) not null,
 	tel varchar(30) not null);
 
-create table subject (
-	id varchar(20) not null primary key,
-	kor int not null,
-	eng int not null,
-	math int not null,
-	total int not null,
-	avg float not null,
-	rank int not null,
-	constraint fk_subject_info
-		foreign key (id)
-		references info(id)
-		on delete cascade);
+CREATE TABLE subject (
+	id VARCHAR(20) NOT NULL PRIMARY KEY,
+	kor INT NOT NULL,
+	eng INT NOT NULL,
+	math INT NOT NULL,
+	total INT NOT NULL,
+	avg_score FLOAT NOT NULL,
+	rank_score INT NOT NULL,
+	CONSTRAINT fk_subject_info
+		FOREIGN KEY (id)
+		REFERENCES info(id)
+		ON DELETE CASCADE
+);
+
