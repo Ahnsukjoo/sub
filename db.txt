@@ -18,5 +18,9 @@ CREATE TABLE subject (
 	rank_score INT NOT NULL,
 	PRIMARY KEY (id)
 );
-
+ALTER TABLE subject
+ADD CONSTRAINT fk_subject_info
+FOREIGN KEY (id)
+REFERENCES info(id)
+ON DELETE CASCADE;
 
