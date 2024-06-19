@@ -9,13 +9,14 @@ create table info (
 	tel varchar(30) not null);
 
 CREATE TABLE subject (
-	id VARCHAR(20) NOT NULL PRIMARY KEY,
+	id VARCHAR(20) NOT NULL,
 	kor INT NOT NULL,
 	eng INT NOT NULL,
 	math INT NOT NULL,
 	total INT NOT NULL,
 	avg_score FLOAT NOT NULL,
 	rank_score INT NOT NULL,
+	PRIMARY KEY (id),
 	CONSTRAINT fk_subject_info
 		FOREIGN KEY (id)
 		REFERENCES info(id)
