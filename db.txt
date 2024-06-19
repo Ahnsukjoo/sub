@@ -1,0 +1,22 @@
+create database web_db;
+grant all privileges on web_db.* to 'Grade'@'localhost' identified by 'abcd'
+
+create table info (
+	id varchar(20) not null primary key,
+	pw varchar(20) not null,
+	name varchar(30) not null,
+	dept varchar(20) not null,
+	tel varchar(30) not null);
+
+create table subject (
+	id varchar(20) not null primary key,
+	kor int not null,
+	eng int not null,
+	math int not null,
+	total int not null,
+	avg float not null,
+	rank int not null,
+	constraint fk_subject_info
+		foreign key (id)
+		references info(id)
+		on delete cascade);
