@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
 	$username = "Grade";
-	$password = "dnpq";
+	$password = "abcd";
 	$dbname = "web_db";
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
